@@ -1,0 +1,26 @@
+/* style.css */
+.container {
+    text-align: center;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 2px;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+}
+
+.player1-piece {
+    background-color: red; /* ou a cor desejada para o jogador 1 */
+    border-radius: 50%;
+}
+
+.player2-piece {
+    background-color: yellow; /* ou a cor desejada para o jogador 2 */
+    border-radius: 50%;
+}
