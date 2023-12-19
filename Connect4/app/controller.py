@@ -29,7 +29,7 @@ jogo = GameController()
 def index():
     return render_template('index.html')
 
-# ... (código anterior)
+
 
 @app.route('/submit_name', methods=['POST'])
 def submit_name():
@@ -41,13 +41,11 @@ def submit_name():
     elif jogador_atual == '2':
         jogo.nome_jogador2 = nome_jogador
 
-    # Verifica se ambos os jogadores forneceram seus nomes
     if jogo.nome_jogador1 and jogo.nome_jogador2:
         return jsonify({'status': 'success', 'jogador_atual': 1})
     else:
         return jsonify({'status': 'wait', 'jogador_atual': int(jogador_atual) + 1})
 
-# ... (código anterior)
 
 @app.route('/game')
 def game():

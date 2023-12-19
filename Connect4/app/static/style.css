@@ -1,4 +1,3 @@
-/* style.css */
 .container {
     text-align: center;
 }
@@ -16,11 +15,11 @@
 }
 
 .player1-piece {
-    background-color: red; /* ou a cor desejada para o jogador 1 */
+    background-color: red; 
     border-radius: 50%;
 }
 
 .player2-piece {
-    background-color: yellow; /* ou a cor desejada para o jogador 2 */
+    background-color: yellow; 
     border-radius: 50%;
 }

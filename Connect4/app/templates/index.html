@@ -13,7 +13,7 @@
         </header>
         
         <section id="game-board">
-            <!-- Aqui será renderizado o tabuleiro e as peças do jogo -->
+
         </section>
 
         <div id="name-input">
@@ -47,7 +47,6 @@
                 if (data.status === 'success') {
                     document.getElementById("current-player").value = data.jogador_atual;
 
-                    // Se ambos os jogadores forneceram seus nomes, exiba o tabuleiro
                     if (data.jogador_atual === 1) {
                         document.getElementById("game-board").style.display = "block";
                         document.getElementById("name-input").style.display = "none";
@@ -63,9 +62,8 @@
 
         function updateBoard(data) {
     var gameBoard = document.getElementById("game-board");
-    gameBoard.innerHTML = "";  // Limpa o conteúdo atual do tabuleiro
+    gameBoard.innerHTML = "";  
 
-    // Itera sobre os dados do tabuleiro e renderiza as peças
     for (var row = 0; row < data.tabuleiro.length; row++) {
         for (var col = 0; col < data.tabuleiro[row].length; col++) {
             var piece = data.tabuleiro[row][col];
